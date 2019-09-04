@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background: #404f6a;
+        }
+        .container{
+            position: absolute;
+            top: 150px;
+            left: 500px;
+        }
+        button{
+            width: 50px;
+            height: 50px;
+            margin: 3px;
+            font-size: 22px;
+        }
+        #displayNumber{
+            width: 227px;
+            height: 50px;
+            font-size: 32px;
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="display">
+            <input type="text" name="display" id="displayNumber" placeholder="Enter number">
+        </div>
+        <button id="1" value="1" >1</button>
+        <button id="2" value="2">2</button>
+        <button id="3" value="3">3</button>
+        <button id="+"value="+">+</button>
+        <br>
+        <button id="4" value="4">4</button>
+        <button id="5" value="5">5</button>
+        <button id="6" value="6">6</button>
+        <button id="-"value="-">-</button>
+        <br>
+        <button id="7" value="7">7</button>
+        <button id="8"value="8">8</button>
+        <button id="9"value="9">9</button>
+        <button id="*"value="*">*</button>
+        <br>
+        <button id="0"value="0">0</button>
+        <button id="/"value="/">/</button>
+        <button id="="value="=">=</button>
+        <button id="c"value="c">c</button>
+</div>
+</body>
+<script>
+    const noOne = document.getElementById('1')
+    const noTwo = document.getElementById('2')
+    const noThree = document.getElementById('3')
+    const noFour = document.getElementById('4')
+    const noFive = document.getElementById('5')
+    const noSix = document.getElementById('6')
+    const noSeven = document.getElementById('7')
+    const noEight = document.getElementById('8')
+    const noNine = document.getElementById('9')
+    const noZero = document.getElementById('0')
+
+    const minus = document.getElementById('-')
+    const plus = document.getElementById('+')
+    const multi = document.getElementById('*')
+    const divide = document.getElementById('/')
+
+    const equal = document.getElementById('=')
+    const clear = document.getElementById('c')
+    const display = document.getElementById('displayNumber')
+
+noOne.addEventListener('click', function(){
+    const noOneValue =  noOne.value;
+    const int = eval(noOneValue);
+    display.value = display.value + int  ;
+    
+})
+noTwo.addEventListener('click', function(){
+    const noTwoValue =  noTwo.value;
+    const int = eval(noTwoValue);
+    display.value = display.value + int;
+    
+})
+noThree.addEventListener('click', function(){
+    const int = eval(noThree.value);
+    display.value = display.value + int;
+    
+})
+noFour.addEventListener('click', function(){
+    const int = eval(noFour.value);
+    display.value = display.value + int;
+    
+})
+noFive.addEventListener('click', function(){
+    const int = eval(noFive.value);
+    display.value = display.value + int;
+    
+})
+noSix.addEventListener('click', function(){
+    const int = eval(noSix.value);
+    display.value = display.value + int;
+    
+})
+noSeven.addEventListener('click', function(){
+    const int = eval(noSeven.value);
+    display.value = display.value + int;
+    
+})
+noEight.addEventListener('click', function(){
+    const int = eval(noEight.value);
+    display.value = display.value + int;
+    
+})
+noNine.addEventListener('click', function(){
+    const int = eval(noNine.value);
+    display.value = display.value + int;
+    
+})
+noZero.addEventListener('click', function(){
+    const int = eval(noZero.value);
+    display.value = display.value + int;
+    
+})
+
+
+minus.addEventListener('click', function(){
+    const sub = '-'
+    display.value = display.value + sub;
+     })
+plus.addEventListener('click', function(){
+    const add = '+'
+    display.value = display.value + add;
+     })
+multi.addEventListener('click', function(){
+    const times = '*'
+    display.value = display.value + times;
+     })
+divide.addEventListener('click', function(){
+    const di = '/'
+    display.value = display.value + di;
+     })
+
+
+equal.addEventListener('click', function(){
+    if(display.value){
+       display.value = eval(display.value); 
+    }
+})
+clear.addEventListener('click', function(){
+   display.value = ''
+})
+
+</script>
+</html>
